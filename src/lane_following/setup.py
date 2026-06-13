@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'lane_detector = lane_following.lane_detector:main',
+            'lane_detector = lane_following.stage1_hough:main',
         ],
     },
 )
