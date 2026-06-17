@@ -18,14 +18,18 @@ Problem:
 ---
 
 ### Stage 2: ROI + Filtering Improvements
-- region of interest masking
-- improved line filtering
+- Shortened ROI
+- Excluded extremes line filtering
+- Added smoothing motion using previous angular twist
 
-Improved stability but still fragile in curved tracks
+Problem:
+- Still unable to detect lines for first sharp turn
+- Angular twist Z was outputting extremely low values (0.008)
+- Line detection showed 0 lines were being detected at the start of the curve
 
 ---
 
-### Stage 3: Centroid-Based Lane Tracking
+### Stage 3: Centroid-Based Lane Tracking (Next)
 - threshold-based lane segmentation
 - centroid computation of lane pixels
 - robust to missing lane markings
@@ -34,14 +38,14 @@ Major improvement in robustness
 
 ---
 
-### Stage 4: PID Controller
+### Stage 4: PID Controller (Not Done)
 - replaces P controller
 - smoother steering response
 - reduced oscillation
 
 ---
 
-### Stage 5: AutoRace Optimization
+### Stage 5: AutoRace Optimization (Not Done)
 - tuned parameters for TurtleBot3 AutoRace world
 - improved curve handling
 - stable lap completion
